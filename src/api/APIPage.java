@@ -28,18 +28,11 @@ public class APIPage
 
     @POST
     @Path("/facture")
-    public Response addFacture(@FormParam("fid") int fid, @FormParam("items") String items)
+    public Response addFacture(@QueryParam("fid") int fid, @QueryParam("pid") int pid, @QueryParam("fid") int qte)
     {
+        String outMsg = CassandraConnector.addFacture(fid,pid,qte);
+        return Response.status(200).entity(outMsg).build();
 
-        try {
-            HashMap<String,Object> result =
-                    new ObjectMapper().readValue(items, HashMap.class);
-            String outMsg = CassandraConnector.addFacture(fid,result);
-            return Response.status(200).entity(outMsg).build();
-        } catch (Exception e) {
-            e.printStackTrace();
-            return Response.status(200).entity(e.getMessage()).build();
-        }
     }
 
 }
