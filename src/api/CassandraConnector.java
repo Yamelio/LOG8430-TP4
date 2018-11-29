@@ -28,10 +28,11 @@ public class CassandraConnector {
         return toJson(rs);
     }
 
-    public static void addFacture(int fid, Map<Integer,Integer> items){
-        for(int i : items.keySet()){
+    public static String addFacture(int fid, Map<String,Object> items){
+        for(String i : items.keySet()){
             session.execute("insert into facture(fid,pid,qte) values("+fid+","+i+","+items.get(i));
         }
+        return "ok";
     }
 
 
