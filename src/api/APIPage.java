@@ -5,14 +5,14 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.core.Response;
 
-@Path("/hi")
+@Path("/api")
 public class APIPage
 {
     @GET
-    @Path("/{name}")
-    public Response getMessage(@PathParam("name") String name)
+    @Path("/produits")
+    public Response getMessage()
     {
-        String outMsg = "BONJOUR CE CERVISE MARCHE " + name + "!";
+        String outMsg = CassandraConnector.getProduits();
         return Response.status(200).entity(outMsg).build();
     }
 
