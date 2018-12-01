@@ -19,7 +19,7 @@ public class APIPage
     }
 
     @GET
-    @Path("/facture")
+    @Path("/factures")
     public Response getFactures()
     {
         String outMsg = CassandraConnector.getFactures();
@@ -27,7 +27,7 @@ public class APIPage
     }
 
     @POST
-    @Path("/facture")
+    @Path("/factures")
     public Response addFacture(@QueryParam("fid") int fid, @QueryParam("pid") int pid, @QueryParam("qte") int qte)
     {
         String outMsg = CassandraConnector.addFacture(fid,pid,qte);
