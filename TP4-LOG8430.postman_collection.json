@@ -1,0 +1,95 @@
+{
+	"info": {
+		"_postman_id": "e6e846c6-1da7-4339-b6e7-b1d4795f8c36",
+		"name": "TP4-LOG8430",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "192.168.111.1:8080/api/produits",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "192.168.111.1:8080/api/produits",
+					"host": [
+						"192",
+						"168",
+						"111",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"produits"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "192.168.111.1:8080/api/factures",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "192.168.111.1:8080/api/factures",
+					"host": [
+						"192",
+						"168",
+						"111",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"factures"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "192.168.111.1:8080/api/factures",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"fid\": 1,\n\t\"products\":\n\t[\n\t\t{\n\t\t\t\"pid\": 1,\n\t\t\t\"qte\": 2\n\t\t},\n\t\t{\t\n\t\t\t\"pid\": 2,\n\t\t\t\"qte\": 3\n\t\t}\n\t]\n}"
+				},
+				"url": {
+					"raw": "192.168.111.1:8080/api/factures",
+					"host": [
+						"192",
+						"168",
+						"111",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"factures"
+					]
+				},
+				"description": "add facture id 1 & 2"
+			},
+			"response": []
+		}
+	]
+}
