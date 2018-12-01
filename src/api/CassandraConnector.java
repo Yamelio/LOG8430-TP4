@@ -29,7 +29,7 @@ public class CassandraConnector {
     }
 
     public static String addFacture(int fid, int pid, int qte){
-        session.execute("insert into facture(fid,pid,qte) values("+fid+","+pid+","+qte);
+        session.execute("insert into facture(fid,pid,qte) values("+fid+","+pid+","+qte+")");
         return "ok";
     }
 
