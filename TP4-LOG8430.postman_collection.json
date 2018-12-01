@@ -1,12 +1,221 @@
 {
 	"info": {
-		"_postman_id": "e6e846c6-1da7-4339-b6e7-b1d4795f8c36",
+		"_postman_id": "f89978d0-1e77-4928-84ea-84fad753b641",
 		"name": "TP4-LOG8430",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "192.168.111.1:8080/api/produits",
+			"name": "Add produits to factures",
+			"item": [
+				{
+					"name": "1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "192.168.111.1:8080/LOG/lab/api/factures?fid=1&pid=1&qte=2",
+							"host": [
+								"192",
+								"168",
+								"111",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"LOG",
+								"lab",
+								"api",
+								"factures"
+							],
+							"query": [
+								{
+									"key": "fid",
+									"value": "1"
+								},
+								{
+									"key": "pid",
+									"value": "1"
+								},
+								{
+									"key": "qte",
+									"value": "2"
+								}
+							]
+						},
+						"description": "add facture id 1 & 2"
+					},
+					"response": []
+				},
+				{
+					"name": "2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "192.168.111.1:8080/LOG/lab/api/factures?fid=1&pid=2&qte=3",
+							"host": [
+								"192",
+								"168",
+								"111",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"LOG",
+								"lab",
+								"api",
+								"factures"
+							],
+							"query": [
+								{
+									"key": "fid",
+									"value": "1"
+								},
+								{
+									"key": "pid",
+									"value": "2"
+								},
+								{
+									"key": "qte",
+									"value": "3"
+								}
+							]
+						},
+						"description": "add facture id 1 & 2"
+					},
+					"response": []
+				},
+				{
+					"name": "3",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "192.168.111.1:8080/LOG/lab/api/factures?fid=2&pid=3&qte=1",
+							"host": [
+								"192",
+								"168",
+								"111",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"LOG",
+								"lab",
+								"api",
+								"factures"
+							],
+							"query": [
+								{
+									"key": "fid",
+									"value": "2"
+								},
+								{
+									"key": "pid",
+									"value": "3"
+								},
+								{
+									"key": "qte",
+									"value": "1"
+								}
+							]
+						},
+						"description": "add facture id 1 & 2"
+					},
+					"response": []
+				},
+				{
+					"name": "4",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "192.168.111.1:8080/LOG/lab/api/factures?fid=2&pid=1&qte=2",
+							"host": [
+								"192",
+								"168",
+								"111",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"LOG",
+								"lab",
+								"api",
+								"factures"
+							],
+							"query": [
+								{
+									"key": "fid",
+									"value": "2"
+								},
+								{
+									"key": "pid",
+									"value": "1"
+								},
+								{
+									"key": "qte",
+									"value": "2"
+								}
+							]
+						},
+						"description": "add facture id 1 & 2"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get produits",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -15,7 +224,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "192.168.111.1:8080/api/produits",
+					"raw": "192.168.111.1:8080/LOG/lab/api/produits",
 					"host": [
 						"192",
 						"168",
@@ -24,6 +233,8 @@
 					],
 					"port": "8080",
 					"path": [
+						"LOG",
+						"lab",
 						"api",
 						"produits"
 					]
@@ -32,7 +243,7 @@
 			"response": []
 		},
 		{
-			"name": "192.168.111.1:8080/api/factures",
+			"name": "Get factures",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -41,7 +252,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "192.168.111.1:8080/api/factures",
+					"raw": "192.168.111.1:8080/LOG/lab/api/factures",
 					"host": [
 						"192",
 						"168",
@@ -50,44 +261,12 @@
 					],
 					"port": "8080",
 					"path": [
+						"LOG",
+						"lab",
 						"api",
 						"factures"
 					]
 				}
-			},
-			"response": []
-		},
-		{
-			"name": "192.168.111.1:8080/api/factures",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n\t\"fid\": 1,\n\t\"products\":\n\t[\n\t\t{\n\t\t\t\"pid\": 1,\n\t\t\t\"qte\": 2\n\t\t},\n\t\t{\t\n\t\t\t\"pid\": 2,\n\t\t\t\"qte\": 3\n\t\t}\n\t]\n}"
-				},
-				"url": {
-					"raw": "192.168.111.1:8080/api/factures",
-					"host": [
-						"192",
-						"168",
-						"111",
-						"1"
-					],
-					"port": "8080",
-					"path": [
-						"api",
-						"factures"
-					]
-				},
-				"description": "add facture id 1 & 2"
 			},
 			"response": []
 		}
