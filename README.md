@@ -145,7 +145,7 @@ Nous allons maintenant installer les dépendances nécessaires pour Apache Spark
 
 Tout d'abord, Java 7:
 ```bash
-#Install Java 7
+# Install Java 7
 $ sudo apt-get install python-software-properties
 $ sudo add-apt-repository ppa:webupd8team/java
 $ sudo apt-get update
@@ -154,13 +154,13 @@ $ sudo apt-get install oracle-java7-installer
 
 Puis Scala:
 ```bash
-#Install Scala
+# Install Scala
 $ sudo apt-get install scala
 ```
 
 Nous allons maintenant configurer SSH, mais seulement sur la VM master:
 ```bash
-#Install Open SSH Server-Client
+# Install Open SSH Server-Client
 $ sudo apt-get install openssh-server openssh-client
 
 #Générations des paires de clés
@@ -179,17 +179,17 @@ $ ssh slave02
 
 Ensuite, nous sommes maintenant à l'étape de télécharger et installer Apache Spark. Ces étapes sont à réaliser sur les 3 VM de la grappe.
 ```bash
-#Télécharger la dernière version de Spark
+# Télécharger la dernière version de Spark
 $ wget http://www-us.apache.org/dist/spark/spark-2.4.0/spark-2.4.0-bin-hadoop2.7.tgz
-#Extraire Spark
+# Extraire Spark
 $ tar xvf spark-2.4.0-bin-hadoop2.7.tgz
-#Déplacer les fichiers vers le dossier d'installation
+# Déplacer les fichiers vers le dossier d'installation
 $ sudo mv spark-2.4.0-bin-hadoop2.7 /usr/local/spark
 ```
 
 Il ne reste maintenant plus qu'à mettre au point l'environnement pour Spark:
 ```bash
-#Modifier le fichier bashrc
+# Modifier le fichier bashrc
 $ sudo vim ~/.bashrc
 ```
 
@@ -208,7 +208,7 @@ $ source ~/.bashrc
 Exécutez les prochaines instructions **seulement** sur la machine virtuelle master.
 
 ```bash
-#Se déplacer au dossier conf, puis créer une copie template
+# Se déplacer au dossier conf, puis créer une copie template
 $ cd /usr/local/spark/conf
 $ cp spark-env.sh.template spark-env.sh
 ```
