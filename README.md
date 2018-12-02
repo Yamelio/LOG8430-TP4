@@ -31,6 +31,12 @@ le réseau se décompose comme ceci:
 Nous n'avons pas besoin de définir de port fowarding ici, il suffit de tout laisser passer.
 Il peut être nécessaire de **désactiver le firewall** si il est actif sur les VM
 
+> pour toutes les installations de logiciel, vous devez avoir un accès à intrenet.
+Par default, le reseauNat ne donne pas cet accès.
+Deux solution à ce problème:
++ vous utilisez le mode par default(NAT)pour installer les logiciels et ensuite vous redéfinisez vos adresses et la configuration du réseau
++ vous utilisez les adresses du réseau de la machine hôte en utilisant le mode "pont" ou "bridged". Cela donnera a votre VM une adresse sur le sous réseau de l'hôtable
+Attention, ces adresses seront attribuées selon le server DHCP de votre router, vieillez à redéfinir chaques adresses de VM données si dessus
 ***
 
 ## Configuration du Client Postman
@@ -96,7 +102,9 @@ Selectionnez save, et continuez l'installation.
 
 Une fois celle-ci terminée, redémarez la machine, identifiez vous pour obtenir une invite de commande.
 
-## Configuration du server Tomcat
+## Server Web Tomcat
+
+### Configuration
 
 Dans un premier temps, créez une nouvelle VM appelée server_web_tomcat à l'adresse **192.168.111.1**
 
@@ -104,15 +112,210 @@ Vérifiez qu'elle possède bien la bonne adresse ip en tapant dans l'invite de c
 ```bash
 $ ifconfig
 ```
-installer ensuite le server TomCat:
+installer ensuite le server TomCat via apt:
 
 ```bash
 #on met a jour la liste des packets
 $ sudo apt-get update
 # on installe la dernière version du kit de developpement java
-$ sudo at-get install default-jdk
+$ sudo apt-get install default-jdk
 # on installe TomCat
-$ sudo apt install tomcat8
+$ sudo apt install tomcat9
 # on demare le server tomcat:
 $ sudo service tomcat8 start
 ```
+
+### Service Web
+
+Si ca n'est pas déjà fait, arretez le service tomcat:
+```bash
+$ sudo service tomcat9 stop
+```
+
+Telechargez depuis le dépôt github le dossier ```/tomcat/```
+Copiez ce dossier dans ```/usr/local/tomcat/```
+Et relancez le server
+```bash
+$ sudo service tomcat9 start
+```
+Pour vous assurez que le server est bien lancé, vous pouvez pinger cette adresse : **192.168.111.1:8080**.
+> Si vous obtenez une erreur, référez vous à la [documentation Tomcat](http://tomcat.apache.org/tomcat-9.0-doc/)
+
+## Base de donnée Cassandra
+
+### Configuration
+
+Tout d'abord, créez une nouvelle VM d'adresse **192.168.111.10**.
+
+Ensuite, nous allons installer le server de base de donnée cassandra:
+
+Si vous n'avez pas accès à une interface graphique:
+```bash
+# on installe la dernière version de java **Oracle**
+# replace xxx by your version of jdk ou press tab just after "openjdk"
+$ sudo apt-get purge openjdkxxx
+$ sudo add-apt-repository ppa:webupd8team/java
+$ sudo apt update
+$ sudo apt install oracle-java8-installer
+```
+Sinon, Telechargez et installez la dernière version de Java [ici](https://download.oracle.com/otn-pub/java/jdk/11.0.1+13/90cf5d8f270a4347a95050320eef3fb7/jdk-11.0.1_linux-x64_bin.deb)
+
+Ensuite
+``` bash
+# on ajoute l adresse du packet a la liste des apt
+$ echo "deb http://www.apache.org/dist/cassandra/debian 36x main" | sudo tee -a /etc/apt/sources.list.d/cassandra.sources.list
+# on ajoute les clefs
+$ curl https://www.apache.org/dist/cassandra/KEYS | sudo apt-key add -
+# rafraichissez la liste des packets disponibles
+$ sudo apt-get update
+# on installe Cassandra
+$ sudo apt-get install cassandra
+# on verifie que l'installation s'est bien dérouléel en lancant le Service
+$ sudo service cassandra start
+$ sudo service cassandra status
+```
+> Si vous obtenez une erreur, référez vous à la [documentation cassandra](http://cassandra.apache.org/doc/latest/)
+
+
+### Service Web
+
+Nous devons maitenant remplir la base de donnée.
+Pour Cela, démarez la console cassandra:
+```bash
+$ cqlsh localhost
+```
+> Le firewall peut bloquer les port 9048 et 9160 utilisé par cassandra. Désactivez le ou autorisez les paquets sur ce port pour supprimer l'erreur de connexion:
+```bash
+$ sudo iptables -A INPUT -p tcp -m tcp --dport 9042 -j ACCEPT
+$ sudo iptables -A INPUT -p tcp -m tcp --dport 9160 -j ACCEPT
+$ sudo service iptables save
+```
+
+Vous devez obtenir cela:
+```bash
+Connected to Test Cluster at localhost:9042.
+[cqlsh 5.0.1 | Cassandra 3.8 | CQL spec 3.4.2 | Native protocol v4]
+Use HELP for help.
+cqlsh> SELECT cluster_name, listen_address FROM system.local;
+
+ cluster_name | listen_address
+--------------+----------------
+ Test Cluster |      127.0.0.1
+
+(1 rows)
+cqlsh>
+```
+
+Nous allons maintenant créer un KeySpace, une nouvelle table et des données
+
+```sql
+CREATE KEYSPACE KeySpace;
+
+CREATE TABLE facture (
+  fid int,
+  pid set,
+  qte set,
+  );
+CREATE TABLE produit (
+  productId int PRIMARY KEY,
+  pid int
+  name text
+  );
+
+
+INSERT INTO produit JSON
+[{"pid": 1,
+  "name": "chaussette_noel"
+},
+{"pid": 2,
+  "name": "chaussette_paques"
+},
+{"pid": 3,
+  "name": "chaussette_anniversaire"
+},
+{"pid": 4,
+  "name": "chaussette_nouvel_ans"
+},
+{"pid": 5,
+  "name": "chaussette_velo"
+},
+{"pid": 6,
+  "name": "chaussette_foot"
+},
+{"pid": 7,
+  "name": "chaussette_skate"
+},
+{"pid": 8,
+  "name": "chaussette_tennis"
+},
+{"pid": 9,
+  "name": "chaussette_ski"
+},
+{"pid": 10,
+  "name": "chaussette_course"
+}];
+
+INSERT INTO facture JSON
+[{
+  "fid": 1,
+  "pid": 1,
+  "qte": 3
+},
+{
+  "fid": 1,
+  "pid": 2,
+  "qte": 1
+},
+{
+  "fid": 1,
+  "pid": 6,
+  "qte": 1,
+},
+{
+  "fid": 2,
+  "pid": 1,
+  "qte": 2
+},
+{
+  "fid": 2,
+  "pid": 2,
+  "qte": 3
+},
+{
+  "fid": 2,
+  "pid": 10,
+  "qte": 3
+},
+{
+  "fid": 4,
+  "pid": 5,
+  "qte": 2
+},
+{
+  "fid": 4,
+  "pid": 4,
+  "qte": 10
+},
+{
+  "fid": 5,
+  "pid": 1,
+  "qte": 3
+},
+{
+  "fid": 5,
+  "pid": 2,
+  "qte": 3
+},
+{
+  "fid": 6,
+  "pid": 8,
+  "qte": 3
+},
+{
+  "fid": 1,
+  "pid": 1,
+  "qte": 3
+}];
+```
+
+Le server de base de donnée est maintenant actif !
