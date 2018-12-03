@@ -49,7 +49,7 @@ Nous utilisons deux principales requêtes
     - sur un Id de facture spécifié en paramêtre d'URL.
 + Une requête **POST**
 
-```javascript
+```json
 {
   factureId: <factureId>
   product: [
@@ -58,7 +58,8 @@ Nous utilisons deux principales requêtes
         prix: <productPrice>,
         qte: <productQuantity>
       },
-      {...}]
+      {...}
+  ]
 }
 ```
 Pour configurer le client, il vous faut simplement lancer PostMan sur la machine host, et importer la collection.
@@ -120,7 +121,7 @@ $ sudo apt-get install default-jdk
 # on installe TomCat
 $ sudo apt install tomcat9
 # on demare le server tomcat:
-$ sudo service tomcat8 start
+$ sudo service tomcat9 start
 ```
 
 ### Service Web
@@ -131,7 +132,7 @@ $ sudo service tomcat9 stop
 ```
 
 Telechargez depuis le dépôt github le dossier ```/tomcat/```
-Copiez ce dossier dans ```/usr/local/tomcat/```
+Copiez le contenu du dossier ```/out/artifacts/web_war_exploded/``` dans un nouveau dossier ```LOG``` dans ```/usr/local/tomcat/webapps```
 Et relancez le server
 ```bash
 $ sudo service tomcat9 start
@@ -171,6 +172,7 @@ $ sudo apt-get install cassandra
 # on verifie que l'installation s'est bien dérouléel en lancant le Service
 $ sudo service cassandra start
 $ sudo service cassandra status
+$ cassandra
 ```
 > Si vous obtenez une erreur, référez vous à la [documentation cassandra](http://cassandra.apache.org/doc/latest/)
 
@@ -180,7 +182,7 @@ $ sudo service cassandra status
 Nous devons maitenant remplir la base de donnée.
 Pour Cela, démarez la console cassandra:
 ```bash
-$ cqlsh localhost
+$ cqlsh
 ```
 > Le firewall peut bloquer les port 9048 et 9160 utilisé par cassandra. Désactivez le ou autorisez les paquets sur ce port pour supprimer l'erreur de connexion:
 ```bash
