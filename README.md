@@ -49,18 +49,8 @@ Nous utilisons deux principales requêtes
     - sur un Id de facture spécifié en paramêtre d'URL.
 + Une requête **POST**
 
-```json
-{
-  factureId: <factureId>
-  product: [
-      {
-        productId: <productId>,
-        prix: <productPrice>,
-        qte: <productQuantity>
-      },
-      {...}
-  ]
-}
+```URL
+http://localhost/LOG/lab/api/facture?fid=X&pid=Y&qte=Z
 ```
 Pour configurer le client, il vous faut simplement lancer PostMan sur la machine host, et importer la collection.
 Une fois la collection chargée, il vous suffit de sélectionner l'onglet de la requête que vous voulez lancer, et cliquer sur *SEND*
@@ -209,7 +199,7 @@ cqlsh>
 Nous allons maintenant créer un KeySpace, une nouvelle table et des données
 
 ```sql
-CREATE KEYSPACE KeySpace;
+CREATE KEYSPACE log8430;
 
 CREATE TABLE facture (
   fid int,
