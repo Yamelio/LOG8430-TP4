@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0bb4f547-ea42-45e8-997a-0a4d6821dac4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../tomcat/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tomcat/.idea/tomcat.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LOG8430-TP4.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/classes/api/API.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/classes/api/APIPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/classes/api/CassandraConnector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/lib/aopalliance-repackaged-2.5.0-b42.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/lib/cassandra-all-3.11.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/lib/cassandra-driver-core-3.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/lib/cdi-api-1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/lib/el-api-2.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/lib/guava-16.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/lib/hk2-api-2.5.0-b42.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/lib/hk2-locator-2.5.0-b42.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/lib/hk2-utils-2.5.0-b42.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/lib/jackson-core-2.2.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/lib/jackson-databind-2.9.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/lib/javassist-3.22.0-CR2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/lib/javax.annotation-api-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/lib/javax.inject-1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/lib/javax.inject-2.5.0-b42.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/lib/javax.json-1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/lib/javax.json-api-1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/lib/javax.json.bind-api-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/lib/javax.servlet-api-3.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/lib/javax.ws.rs-api-2.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/lib/jaxb-api-2.2.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/lib/jboss-interceptors-api_1.1_spec-1.0.0.Beta1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/lib/jersey-client.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/lib/jersey-common.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/lib/jersey-container-servlet-core.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/lib/jersey-container-servlet.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/lib/jersey-hk2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/lib/jersey-media-jaxb.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/lib/jersey-media-json-binding.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/lib/jersey-media-sse.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/lib/jersey-server.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/lib/jsr250-api-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/lib/metrics-core-3.1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/lib/netty-buffer-4.0.33.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/lib/netty-codec-4.0.33.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/lib/netty-common-4.0.33.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/lib/netty-handler-4.0.33.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/lib/netty-transport-4.0.33.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/lib/org.osgi.core-4.2.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/lib/osgi-resource-locator-1.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/lib/persistence-api-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/lib/slf4j-api-1.7.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/lib/validation-api-1.1.0.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/WEB-INF/lib/yasson-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_war_exploded/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/LOG8430-TP4/api/API.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/LOG8430-TP4/api/APIPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/LOG8430-TP4/api/CassandraConnector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/api/API.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/api/APIPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/api/CassandraConnector.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/lib/aopalliance-repackaged-2.5.0-b42.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/lib/cassandra-all-3.11.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/lib/cassandra-driver-core-3.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/lib/cdi-api-1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/lib/el-api-2.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/lib/guava-16.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/lib/hk2-api-2.5.0-b42.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/lib/hk2-locator-2.5.0-b42.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/lib/hk2-utils-2.5.0-b42.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/lib/jackson-core-2.2.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/lib/jackson-databind-2.9.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/lib/javassist-3.22.0-CR2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/lib/javax.annotation-api-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/lib/javax.inject-1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/lib/javax.inject-2.5.0-b42.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/lib/javax.json-1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/lib/javax.json-api-1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/lib/javax.json.bind-api-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/lib/javax.servlet-api-3.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/lib/javax.ws.rs-api-2.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/lib/jaxb-api-2.2.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/lib/jboss-interceptors-api_1.1_spec-1.0.0.Beta1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/lib/jersey-client.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/lib/jersey-common.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/lib/jersey-container-servlet-core.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/lib/jersey-container-servlet.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/lib/jersey-hk2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/lib/jersey-media-jaxb.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/lib/jersey-media-json-binding.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/lib/jersey-media-sse.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/lib/jersey-server.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/lib/jsr250-api-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/lib/metrics-core-3.1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/lib/netty-buffer-4.0.33.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/lib/netty-codec-4.0.33.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/lib/netty-common-4.0.33.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/lib/netty-handler-4.0.33.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/lib/netty-transport-4.0.33.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/lib/org.osgi.core-4.2.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/lib/osgi-resource-locator-1.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/lib/persistence-api-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/lib/slf4j-api-1.7.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/lib/validation-api-1.1.0.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/WEB-INF/lib/yasson-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/index.jsp" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1829530563">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="4">
+    <option name="x" value="993" />
+    <option name="y" value="25" />
+    <option name="width" value="927" />
+    <option name="height" value="1055" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Spark" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Spark" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tomcat" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0bb4f547-ea42-45e8-997a-0a4d6821dac4" name="Default Changelist" comment="" />
+      <created>1543972688629</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1543972688629</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="993" y="25" width="927" height="1055" extended-state="4" />
+    <layout>
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24631101" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+</project>
